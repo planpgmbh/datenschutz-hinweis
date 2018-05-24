@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Datenschutz Hinweis
-Description: Besucher über Datenschutz informieren
-Version: 1.2
+Description: Besucher über Datenschutz informieren. ACF und Github Updater erforderlich.
+Version: 1.3
 Author URI: http://plan-p.de
 GitHub Plugin URI: planpgmbh/datenschutz-hinweis
 */
