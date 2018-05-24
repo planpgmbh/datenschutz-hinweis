@@ -2,7 +2,7 @@
 /*
 Plugin Name: Datenschutz Hinweis
 Description: Besucher über Datenschutz informieren
-Version: 1.1
+Version: 1.2
 Author URI: http://plan-p.de
 GitHub Plugin URI: planpgmbh/datenschutz-hinweis
 */
@@ -19,7 +19,7 @@ function callback_for_setting_up_css() {
 }
 
 function insert_my_footer() {
-    echo '<style scoped>#data-privacy, button.ok:hover {background:'.get_field('first_color_field', 'option').';}#data-privacy p, button.more-info, button.ok:hover {color:'.get_field('second_color_field', 'option').';}button.ok {background:'.get_field('second_color_field', 'option').';}button.ok {color:'.get_field('first_color_field', 'option').';}button.more-info, button.ok, button.ok:hover {border-color:'.get_field('second_color_field', 'option').';}button.more-info:hover {border-color:'.get_field('first_color_field', 'option').';}</style>';
+    echo '<style scoped>#data-privacy, button.more-info, button.ok:hover {background:'.get_field('first_color_field', 'option').';}#data-privacy p, button.more-info, button.ok:hover {color:'.get_field('second_color_field', 'option').';}button.ok {background:'.get_field('second_color_field', 'option').';}button.ok {color:'.get_field('first_color_field', 'option').';}button, button.ok:hover {border-color:'.get_field('second_color_field', 'option').';}button.more-info:hover {color:'.get_field('first_color_field', 'option').';}button.more-info:hover {background:'.get_field('second_color_field', 'option').';}</style>';
     echo '<div id="data-privacy">';
     echo get_field('main_text_field', 'option');
     echo '<div id="choice">';
