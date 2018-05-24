@@ -2,7 +2,7 @@
 /*
 Plugin Name: Datenschutz Hinweis
 Description: Besucher über Datenschutz informieren. ACF und Github Updater erforderlich.
-Version: 1.5
+Version: 1.5.1
 Author URI: http://plan-p.de
 GitHub Plugin URI: planpgmbh/datenschutz-hinweis
 */
@@ -23,8 +23,8 @@ function insert_my_footer() {
     echo '<div id="data-privacy">';
     echo get_field('main_text_field', 'option');
     echo '<div id="choice">';
-    echo '<a href="'.get_field('imprint-page-field', 'option').'" target="_blank"><button class="more-info">Impressum</button></a>';
-		echo '<a href="'.get_field('data-privacy-page-field', 'option').'" target="_blank"><button class="more-info">'.get_field('button_more_info_field', 'option').'</button></a>';
+    echo '<a href="'.get_field('imprint-page-field', 'option')['url'].'" target="_blank"><button class="more-info">Impressum</button></a>';
+		echo '<a href="'.get_field('data-privacy-page-field', 'option')['url'].'" target="_blank"><button class="more-info">'.get_field('button_more_info_field', 'option').'</button></a>';
     echo '<button class="ok">'.get_field('button_ok_field', 'option').'</button>';
     echo '</div>';
     echo '</div>';
