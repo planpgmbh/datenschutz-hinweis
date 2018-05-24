@@ -2,7 +2,7 @@
 /*
 Plugin Name: Datenschutz Hinweis
 Description: Besucher über Datenschutz informieren. ACF und Github Updater erforderlich.
-Version: 1.7
+Version: 1.7.1
 Author URI: http://plan-p.de
 GitHub Plugin URI: planpgmbh/datenschutz-hinweis
 */
@@ -21,22 +21,22 @@ function callback_for_setting_up_css() {
 function insert_my_footer() {
     echo '
 			<style scoped>
-			#data-privacy, button.more-info, button.ok:hover, button.more-info:hover {
+			#data-privacy, #data-privacy button.more-info, #data-privacy button.ok:hover, #data-privacy button.more-info:hover {
 				background:'.get_field('first_color_field', 'option').';
 			}
-			button.ok {
+			#data-privacy button.ok {
 				background:'.get_field('second_color_field', 'option').';
 			}
-			button.ok {
+			#data-privacy button.ok {
 				color:'.get_field('first_color_field', 'option').';
 			}
-			#data-privacy p, button.more-info, button.ok:hover, button.more-info:hover {
+			#data-privacy p, #data-privacy button.more-info, #data-privacy button.ok:hover, #data-privacy button.more-info:hover {
 				color:'.get_field('second_color_field', 'option').';
 			}
-			button.more-info:hover {
+			#data-privacy button.more-info:hover {
 				border-color:'.get_field('first_color_field', 'option').';
 			}
-			button.ok, button.more-info, button.ok:hover {
+			#data-privacy button.ok, #data-privacy button.more-info, #data-privacy button.ok:hover {
 				border-color:'.get_field('second_color_field', 'option').';
 			}
 			</style>';
