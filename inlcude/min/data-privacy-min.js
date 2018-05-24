@@ -1,0 +1,1 @@
+jQuery(function($){var e=new Date;e.setTime(e.getTime()+7776e6);var a="; expires="+e.toGMTString();$("#data-privacy .ok").click(function(){document.cookie="data-privacy=yes"+a,$("#data-privacy").hide()}),document.cookie.indexOf("data-privacy")>-1&&(console.log("yes"),$("#data-privacy").hide())});
