@@ -2,7 +2,7 @@
 /*
 Plugin Name: Datenschutz Hinweis
 Description: Besucher über Datenschutz informieren. ACF und Github Updater erforderlich.
-Version: 1.3
+Version: 1.4
 Author URI: http://plan-p.de
 GitHub Plugin URI: planpgmbh/datenschutz-hinweis
 */
@@ -19,11 +19,12 @@ function callback_for_setting_up_css() {
 }
 
 function insert_my_footer() {
-    echo '<style scoped>#data-privacy, button.more-info, button.ok:hover {background:'.get_field('first_color_field', 'option').';}#data-privacy p, button.more-info, button.ok:hover {color:'.get_field('second_color_field', 'option').';}button.ok {background:'.get_field('second_color_field', 'option').';}button.ok {color:'.get_field('first_color_field', 'option').';}button, button.ok:hover {border-color:'.get_field('second_color_field', 'option').';}button.more-info:hover {color:'.get_field('first_color_field', 'option').';}button.more-info:hover {background:'.get_field('second_color_field', 'option').';}</style>';
+    echo '<style scoped>#data-privacy, button.more-info, button.ok:hover {background:'.get_field('first_color_field', 'option').';}#data-privacy p, button.more-info, button.ok:hover {color:'.get_field('second_color_field', 'option').';}button.ok {background:'.get_field('second_color_field', 'option').';}button.ok {color:'.get_field('first_color_field', 'option').';}button.ok, button.more-info, button.ok:hover {border-color:'.get_field('second_color_field', 'option').';}button.more-info:hover {color:'.get_field('second_color_field', 'option').';border-color:'.get_field('first_color_field', 'option').';}button.more-info:hover {background:'.get_field('first_color_field', 'option').';}</style>';
     echo '<div id="data-privacy">';
     echo get_field('main_text_field', 'option');
     echo '<div id="choice">';
-    echo '<a href="'.get_field('data-privacy-page-field', 'option').'" target="_blank"><button class="more-info">'.get_field('button_more_info_field', 'option').'</button></a>';
+    echo '<a href="'.get_field('imprint-page-field', 'option').'" target="_blank"><button class="more-info">Impressum</button></a>';
+		echo '<a href="'.get_field('data-privacy-page-field', 'option').'" target="_blank"><button class="more-info">'.get_field('button_more_info_field', 'option').'</button></a>';
     echo '<button class="ok">'.get_field('button_ok_field', 'option').'</button>';
     echo '</div>';
     echo '</div>';
@@ -96,6 +97,12 @@ acf_add_local_field_group(array(
 			'key' => 'data-privacy-page-field',
 			'label' => 'Link zur Datenschutzerklärung',
 			'name' => 'data-privacy-page',
+			'type' => 'page_link'
+		),
+		array (
+			'key' => 'imprint-page-field',
+			'label' => 'Link zum Impressum',
+			'name' => 'imprint-page',
 			'type' => 'page_link'
 		),
 	),

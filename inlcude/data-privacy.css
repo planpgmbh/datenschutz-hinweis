@@ -12,7 +12,7 @@
   font-family: Arial, sans-serif;
   font-size: 15px;
   line-height: 18px;
-  margin: 0px 0px 10px 0px;
+  margin: 0px;
   float: left;
 }
 
@@ -20,11 +20,12 @@
   float: right;
 }
 
-button {
+button.ok, button.more-info {
   font-weight: bold;
   margin: 5px;
   cursor: pointer;
   transition: all 0.4s ease;
+  border-radius: 0px;
 }
 
 button.ok {
@@ -53,6 +54,7 @@ button.ok:hover {
 
 button.more-info:hover {
   border-color: black;
+  background: transparent;
 }
 
 footer {
