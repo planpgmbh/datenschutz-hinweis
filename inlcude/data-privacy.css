@@ -3,9 +3,10 @@
   left: 0px;
   bottom: 0px;
   background: black;
-  width: calc(100% - 80px);
+  width: 100%;
   z-index: 99;
   padding: 20px 40px;
+  box-sizing: border-box;
 }
 #data-privacy p {
   color: white;
