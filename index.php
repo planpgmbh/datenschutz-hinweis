@@ -97,13 +97,13 @@ acf_add_local_field_group(array(
 			'key' => 'data-privacy-page-field',
 			'label' => 'Link zur Datenschutzerklärung',
 			'name' => 'data-privacy-page',
-			'type' => 'page_link'
+			'type' => 'link'
 		),
 		array (
 			'key' => 'imprint-page-field',
 			'label' => 'Link zum Impressum',
 			'name' => 'imprint-page',
-			'type' => 'page_link'
+			'type' => 'link'
 		),
 	),
 	'location' => array (
