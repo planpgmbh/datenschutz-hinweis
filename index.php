@@ -41,12 +41,14 @@ function insert_my_footer() {
 			}
 			</style>';
     echo '<div id="data-privacy">';
+		echo '<div id="data-privacy-text"><div class="data-privacy-wrapper">';
     echo get_field('main_text_field', 'option');
-    echo '<div id="choice">';
+		echo '</div></div>';
+    echo '<div id="data-privacy-choice"><div class="data-privacy-wrapper">';
     echo '<a href="'.get_field('imprint-page-field', 'option')['url'].'" target="_blank"><button class="more-info">'.get_field('imprint-page-field', 'option')['title'].'</button></a>';
 		echo '<a href="'.get_field('data-privacy-page-field', 'option')['url'].'" target="_blank"><button class="more-info">'.get_field('data-privacy-page-field', 'option')['title'].'</button></a>';
     echo '<button class="ok">'.get_field('button_ok_field', 'option').'</button>';
-    echo '</div>';
+    echo '</div></div>';
     echo '</div>';
 }
 
