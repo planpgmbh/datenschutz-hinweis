@@ -19,12 +19,32 @@ function callback_for_setting_up_css() {
 }
 
 function insert_my_footer() {
-    echo '<style scoped>#data-privacy, button.more-info, button.ok:hover {background:'.get_field('first_color_field', 'option').';}#data-privacy p, button.more-info, button.ok:hover {color:'.get_field('second_color_field', 'option').';}button.ok {background:'.get_field('second_color_field', 'option').';}button.ok {color:'.get_field('first_color_field', 'option').';}button.ok, button.more-info, button.ok:hover {border-color:'.get_field('second_color_field', 'option').';}button.more-info:hover {color:'.get_field('second_color_field', 'option').';border-color:'.get_field('first_color_field', 'option').';}button.more-info:hover {background:'.get_field('first_color_field', 'option').';}</style>';
+    echo '
+			<style scoped>
+			#data-privacy, button.more-info, button.ok:hover, button.more-info:hover {
+				background:'.get_field('first_color_field', 'option').';
+			}
+			button.ok {
+				background:'.get_field('second_color_field', 'option').';
+			}
+			button.ok {
+				color:'.get_field('first_color_field', 'option').';
+			}
+			#data-privacy p, button.more-info, button.ok:hover, button.more-info:hover {
+				color:'.get_field('second_color_field', 'option').';
+			}
+			button.more-info:hover {
+				border-color:'.get_field('first_color_field', 'option').';
+			}
+			button.ok, button.more-info, button.ok:hover {
+				border-color:'.get_field('second_color_field', 'option').';
+			}
+			</style>';
     echo '<div id="data-privacy">';
     echo get_field('main_text_field', 'option');
     echo '<div id="choice">';
-    echo '<a href="'.get_field('imprint-page-field', 'option')['url'].'" target="_blank"><button class="more-info">Impressum</button></a>';
-		echo '<a href="'.get_field('data-privacy-page-field', 'option')['url'].'" target="_blank"><button class="more-info">'.get_field('button_more_info_field', 'option').'</button></a>';
+    echo '<a href="'.get_field('imprint-page-field', 'option')['url'].'" target="_blank"><button class="more-info">'.get_field('imprint-page-field', 'option')['title'].'</button></a>';
+		echo '<a href="'.get_field('data-privacy-page-field', 'option')['url'].'" target="_blank"><button class="more-info">'.get_field('data-privacy-page-field', 'option')['title'].'</button></a>';
     echo '<button class="ok">'.get_field('button_ok_field', 'option').'</button>';
     echo '</div>';
     echo '</div>';
@@ -85,13 +105,6 @@ acf_add_local_field_group(array(
 			'name' => 'button_ok',
 			'type' => 'text',
       'default_value' => 'Zustimmen',
-		),
-    array (
-			'key' => 'button_more_info_field',
-			'label' => 'Button-Text für Informationen',
-			'name' => 'button_more_info',
-			'type' => 'text',
-      'default_value' => 'Mehr Informationen',
 		),
     array (
 			'key' => 'data-privacy-page-field',
