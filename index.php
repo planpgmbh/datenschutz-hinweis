@@ -2,7 +2,7 @@
 /*
 Plugin Name: Datenschutz Hinweis
 Description: Besucher über Datenschutz informieren. ACF erforderlich.
-Version: 1.8
+Version: 1.8.1
 Author URI: http://plan-p.de
 */
 
@@ -14,8 +14,10 @@ require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://github.com/planpgmbh/datenschutz-hinweis',
 	__FILE__,
-	'datenschutzhinweis'
+	'datenschutz-hinweis'
 );
+
+ $updateChecker->setBranch('master');
 
 add_action('wp_enqueue_scripts', 'callback_for_setting_up_css');
 function callback_for_setting_up_css() {
