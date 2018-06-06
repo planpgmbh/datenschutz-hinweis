@@ -7,6 +7,7 @@
   z-index: 99;
   padding: 20px 40px;
   box-sizing: border-box;
+  display: none;
 }
 #data-privacy p {
   color: white;

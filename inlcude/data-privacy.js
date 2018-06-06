@@ -7,7 +7,8 @@ jQuery(function($) {
   	$('#data-privacy').hide();
   });
   if (document.cookie.indexOf("data-privacy") > -1) {
-    console.log("yes");
 		$('#data-privacy').hide();
-	}
+	} else {
+    $('#data-privacy').show();
+  }
 });
