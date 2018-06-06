@@ -2,7 +2,7 @@
 /*
 Plugin Name: Datenschutz Hinweis
 Description: Besucher über Datenschutz informieren. ACF erforderlich.
-Version: 1.8
+Version: 1.8.1
 Author URI: http://plan-p.de
 */
 
